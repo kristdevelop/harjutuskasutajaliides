@@ -1,7 +1,8 @@
 # harjutuskasutajaliides
-Tegin päris mitu kasutajaliidese katsetust. Harjutamiseks.
+Tegin päris mitu kasutajaliidese harjutamiseks.
 
+Käesolev töötav näide:
+küsib parooli sisenemiseks
+prindib õige parooli peale loperguse palli
 
-See siin aga peaks olema puhas ehk töötav näide:
-küsib puu liiki, ainult üks on õige valik. 
-Prindib tulemuse.
+OK prog jõuab lõpuni
