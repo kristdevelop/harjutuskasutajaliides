@@ -16,35 +16,34 @@ public class Pokkersisend extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-        VBox vbox = new VBox();
-        //kast kuhu see ilmub
+        VBox vbox = new VBox(); //aken kuhu see ilmub
         Scene login = new Scene(vbox, 400, 100);
         primaryStage.setScene(login);
-        //näita
-        primaryStage.show();
-
-        Label pealkiri = new Label("Ütle, mis puu see oli, mille vanust teada tahad!");
+        primaryStage.show();   //näita
+        Label pealkiri = new Label("Kui tahad sissepääsu, kirjuta siia oma nimi!");
         TextField paroolf = new TextField();
-        Button anna = new Button("vihje :-), kirjuta: kuusk");
-
-        //neist lastest ja mis mille sees - miks, ei mõika!
+        Button anna = new Button("vihje :-), kirjuta: oma nimi");
         vbox.getChildren().addAll(pealkiri, paroolf, anna);
 
         Ellipse lopergune = new Ellipse(400, 200);
         Pane pane = new Pane();
         pane.getChildren().add(lopergune);
         Scene uus = new Scene(pane, 800, 400);
+        System.out.println("kontroll kas teeb loperguse ");
 
+
+//mis tahan: et tekiks uus kast lopergune whatever, kus ta annab teate, et õige valik!
+// Mitte aga et oleks eraldi lopergune kast
         paroolf.setOnAction(event -> {
-            // Tegevus siia
+            // Tegevus siia textfield paroolf
             String parool = paroolf.getText();
-            if (parool.equals("kuusk")) {
+            if (parool.equals("oma nimi")) {
                 System.out.println("õige valik");
                 primaryStage.setScene(uus);
             } else {
                 System.out.println("vali muu puu");
             }
         });
+        System.out.println("kontroll The End");
     }
 }
